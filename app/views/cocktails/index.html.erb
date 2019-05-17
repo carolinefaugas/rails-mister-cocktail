@@ -3,8 +3,8 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="col-3">
-      <div class="card" style="width: 18rem;">
-        <img src="https://images.pexels.com/photos/1268478/pexels-photo-1268478.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="cocktail_img" height="250px">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
         <div class="card-body">
           <h5 class="card-title"><%= cocktail.name %></h5>
           <a href="<%= cocktail_path(cocktail) %>" class="btn btn-primary">More details...</a>
